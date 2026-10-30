@@ -17,9 +17,8 @@ keytool -genkey -v -keystore ~/.android/debug.keystore -storepass android -alias
 How to use
 Clone this repository
 
-git clone https://github.com/sa-fw-an/Android-RAT.git
-cd Android-RAT
-Make sure dependencies are installed and in your PATH.
+
+
 
 Ensure the .android directory exists in your project root (or your home directory) with the debug keystore inside.
 
@@ -29,36 +28,12 @@ python3 cli.py
 Follow the on-screen menu:
 
 
-==============================
+```==============================
    AndroidRAT Main Menu
 ==============================
 [1] Build Android Payload (APK)
 [2] Start Metasploit Listener
 [3] Sign APK
 [4] Patch APK for Visible UI
-[5] Show Help & Exit
+[5] Show Help & Exit```
 
-Menu Options Explained
-Build Android Payload (APK):
-Creates a Meterpreter APK using msfvenom with your provided LHOST and LPORT.
-Start Metasploit Listener:
-Launches a Metasploit multi/handler set to catch your reverse shell connection.
-Sign APK:
-Signs an APK using the debug keystore so it can be installed on Android devices.
-Patch APK for Visible UI:
-Rebuilds a Meterpreter APK to include a visible Activity, required for Android 12/13/14/15 features like webcam and screenshots to work.
-This is what makes the APK compatible with Android 15.
-Show Help & Exit:
-Displays help and exits the tool.
-Android 15 Compatibility
-AndroidRAT Builder includes a patcher that adds a visible user interface (Activity) to Meterpreter payloads.
-This is essential for Android 12+ (including Android 15) due to permission and background execution restrictions.
-After patching, install the APK on the device, open it, grant all requested permissions (Camera, Microphone, Storage, etc.), and keep it in the foreground to use advanced Meterpreter features (webcam, screenshot, etc).
-Educational Purpose Only
-This tool is intended solely for educational and authorized testing. Unauthorized use against devices without permission is illegal.
-
-Authors
-Safwan Sayeed
-Based on community research and open-source tools.
-License
-MIT
