@@ -35,5 +35,5 @@ Follow the on-screen menu:
 [2] Start Metasploit Listener
 [3] Sign APK
 [4] Patch APK for Visible UI
-[5] Show Help & Exit```
+[5] Show Help & Exit
 
